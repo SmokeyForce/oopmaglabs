@@ -21,7 +21,7 @@ namespace magooplabs
     {
         public void DetectVehicle()
         {
-            Console.WriteLine("IndoorSensor: Vihicle inside Indoor parking zone.");
+            Console.WriteLine("IndoorSensor: Vehicle inside Indoor parking zone.");
         }
     }
 
@@ -49,7 +49,7 @@ namespace magooplabs
     {
         public void DetectVehicle()
         {
-            Console.WriteLine("OutdoorSensor: Vihicle inside outdoor parking zone.");
+            Console.WriteLine("OutdoorSensor: Vehicle inside outdoor parking zone.");
         }
     }
 
