@@ -1,0 +1,16 @@
+d:\magooplabs\laba1\oopmaglabs\magooplabs\bin\Debug\net5.0\magooplabs.exe
+d:\magooplabs\laba1\oopmaglabs\magooplabs\bin\Debug\net5.0\magooplabs.deps.json
+d:\magooplabs\laba1\oopmaglabs\magooplabs\bin\Debug\net5.0\magooplabs.runtimeconfig.json
+d:\magooplabs\laba1\oopmaglabs\magooplabs\bin\Debug\net5.0\magooplabs.runtimeconfig.dev.json
+d:\magooplabs\laba1\oopmaglabs\magooplabs\bin\Debug\net5.0\magooplabs.dll
+d:\magooplabs\laba1\oopmaglabs\magooplabs\bin\Debug\net5.0\ref\magooplabs.dll
+d:\magooplabs\laba1\oopmaglabs\magooplabs\bin\Debug\net5.0\magooplabs.pdb
+d:\magooplabs\laba1\oopmaglabs\magooplabs\obj\Debug\net5.0\magooplabs.csproj.AssemblyReference.cache
+d:\magooplabs\laba1\oopmaglabs\magooplabs\obj\Debug\net5.0\magooplabs.GeneratedMSBuildEditorConfig.editorconfig
+d:\magooplabs\laba1\oopmaglabs\magooplabs\obj\Debug\net5.0\magooplabs.AssemblyInfoInputs.cache
+d:\magooplabs\laba1\oopmaglabs\magooplabs\obj\Debug\net5.0\magooplabs.AssemblyInfo.cs
+d:\magooplabs\laba1\oopmaglabs\magooplabs\obj\Debug\net5.0\magooplabs.csproj.CoreCompileInputs.cache
+d:\magooplabs\laba1\oopmaglabs\magooplabs\obj\Debug\net5.0\magooplabs.dll
+d:\magooplabs\laba1\oopmaglabs\magooplabs\obj\Debug\net5.0\ref\magooplabs.dll
+d:\magooplabs\laba1\oopmaglabs\magooplabs\obj\Debug\net5.0\magooplabs.pdb
+d:\magooplabs\laba1\oopmaglabs\magooplabs\obj\Debug\net5.0\magooplabs.genruntimeconfig.cache
