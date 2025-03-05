@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\magooplabs\\laba1\\oopmaglabs\\magooplabs\\magooplabs.csproj": {}
+    "D:\\magooplabs\\laba1\\oopmaglabs\\magooplabs\\magooplabs.csproj": {}
   },
   "projects": {
-    "d:\\magooplabs\\laba1\\oopmaglabs\\magooplabs\\magooplabs.csproj": {
+    "D:\\magooplabs\\laba1\\oopmaglabs\\magooplabs\\magooplabs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\magooplabs\\laba1\\oopmaglabs\\magooplabs\\magooplabs.csproj",
+        "projectUniqueName": "D:\\magooplabs\\laba1\\oopmaglabs\\magooplabs\\magooplabs.csproj",
         "projectName": "magooplabs",
-        "projectPath": "d:\\magooplabs\\laba1\\oopmaglabs\\magooplabs\\magooplabs.csproj",
+        "projectPath": "D:\\magooplabs\\laba1\\oopmaglabs\\magooplabs\\magooplabs.csproj",
         "packagesPath": "C:\\Users\\Smokey\\.nuget\\packages\\",
-        "outputPath": "d:\\magooplabs\\laba1\\oopmaglabs\\magooplabs\\obj\\",
+        "outputPath": "D:\\magooplabs\\laba1\\oopmaglabs\\magooplabs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Smokey\\AppData\\Roaming\\NuGet\\NuGet.Config",
