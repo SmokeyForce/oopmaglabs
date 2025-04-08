@@ -140,7 +140,7 @@ namespace ParkingManagementSystem.Lab4
             Console.WriteLine("\nMobile app payment:");
             mobilePayment.ProcessPayment();
 
-            Console.WriteLine("\nLab4 Demo завершено.\n");
+            Console.WriteLine("\nLab4 is over.\n");
         }
     }
 }
