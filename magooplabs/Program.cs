@@ -3,6 +3,7 @@ using ParkingManagementSystem.Lab1;
 using ParkingManagementSystem.Lab2;
 using ParkingManagementSystem.Lab3;
 using ParkingManagementSystem.Lab4;
+using ParkingManagementSystem.Lab5;
 
 namespace CombinedDemo
 {
@@ -26,6 +27,9 @@ namespace CombinedDemo
 
             Lab4Demo.RunDemo();
 
+            Console.WriteLine("\n-----------------------------\n");
+
+            Lab5Demo.RunDemo();
             Console.WriteLine("Press any button to exit");
             Console.ReadKey();
         }
