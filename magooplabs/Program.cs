@@ -11,7 +11,7 @@ namespace CombinedDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Demo: Lab1 та Lab2\n");
+            Console.WriteLine("Demo:\n");
 
             Lab1Demo.RunDemo();
 
@@ -30,6 +30,11 @@ namespace CombinedDemo
             Console.WriteLine("\n-----------------------------\n");
 
             Lab5Demo.RunDemo();
+            
+            Console.WriteLine("\n-----------------------------\n");
+
+            Lab6Demo.RunDemo();
+
             Console.WriteLine("Press any button to exit");
             Console.ReadKey();
         }
