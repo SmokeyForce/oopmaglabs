@@ -123,12 +123,105 @@ class PaymentTerminal : Component
     }
 }
 
+class Parser
+{
+    private Queue<string> tokens;
+
+    public Parser(string expression)
+    {
+        tokens = new Queue<string>(Tokenize(expression));
+    }
+
+    private IEnumerable<string> Tokenize(string expr)
+    {
+        var tokens = new List<string>();
+        var token = "";
+        for (int i = 0; i < expr.Length; i++)
+        {
+            char c = expr[i];
+            if (char.IsWhiteSpace(c))
+            {
+                if (token != "")
+                {
+                    tokens.Add(token);
+                    token = "";
+                }
+            }
+            else if (c == '(' || c == ')')
+            {
+                if (token != "")
+                {
+                    tokens.Add(token);
+                    token = "";
+                }
+                tokens.Add(c.ToString());
+            }
+            else
+            {
+                token += c;
+            }
+        }
+        if (token != "")
+            tokens.Add(token);
+        return tokens;
+    }
+
+    public IExpression ParseExpression()
+    {
+        return ParseOr();
+    }
+
+    private IExpression ParseOr()
+    {
+        IExpression left = ParseAnd();
+        while (tokens.Count > 0 && tokens.Peek().ToUpper() == "OR")
+        {
+            tokens.Dequeue(); // consume OR
+            IExpression right = ParseAnd();
+            left = new OrExpression(left, right);
+        }
+        return left;
+    }
+
+    private IExpression ParseAnd()
+    {
+        IExpression left = ParseTerm();
+        while (tokens.Count > 0 && tokens.Peek().ToUpper() == "AND")
+        {
+            tokens.Dequeue(); // consume AND
+            IExpression right = ParseTerm();
+            left = new AndExpression(left, right);
+        }
+        return left;
+    }
+
+    private IExpression ParseTerm()
+    {
+        if (tokens.Count == 0)
+            throw new Exception("Unexpected end of expression");
+
+        string token = tokens.Dequeue();
+
+        if (token == "(")
+        {
+            IExpression expr = ParseExpression();
+            if (tokens.Count == 0 || tokens.Dequeue() != ")")
+                throw new Exception("Missing closing parenthesis");
+            return expr;
+        }
+        else
+        {
+            return new TerminalExpression(token);
+        }
+    }
+}
+
 // LAB 6 DEMO 
 public class Lab6Demo
 {
     public static void RunDemo()
     {
-        Console.WriteLine("\n Lab6: Interpreter + Mediator \n");
+        Console.WriteLine("\n Lab6: Interpreter + Mediator + Parser \n");
 
         // Інтерпретатор
         IExpression car = new TerminalExpression("car");
@@ -137,6 +230,16 @@ public class Lab6Demo
 
         Console.WriteLine("\"car\" in context => " + isVehicle.Interpret("car enters"));
         Console.WriteLine("\"bus\" in context => " + isVehicle.Interpret("bus enters"));
+
+        // Parser usage demo
+        var parser = new Parser("car OR bike AND (bus OR train)");
+        IExpression parsedExpression = parser.ParseExpression();
+
+        Console.WriteLine("\"car\" in context => " + parsedExpression.Interpret("car enters"));
+        Console.WriteLine("\"bus\" in context => " + parsedExpression.Interpret("bus enters"));
+        Console.WriteLine("\"train\" in context => " + parsedExpression.Interpret("train arrives"));
+        Console.WriteLine("\"bike\" in context => " + parsedExpression.Interpret("bike rides"));
+        Console.WriteLine("\"plane\" in context => " + parsedExpression.Interpret("plane flies"));
 
         // Медіатор
         var mediator = new ParkingMediator();
